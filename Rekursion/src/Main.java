@@ -4,9 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Factulty: " + faculty(5));
-        System.out.println("Minimum : " + findMinimum(new int[]{3, 5, 7, 8, 4, 39}));
-        System.out.println("Merge   : " + Arrays.toString(mergeSort(new int[]{3, 6, 1, 4, 0, 11, 24, -2, 77})));
+        System.out.println("Factulty | " + faculty(5));
+        System.out.println("Minimum  | " + findMinimum(new int[]{3, 5, 7, 8, 4, 39}));
+        System.out.println("Merge    | " + Arrays.toString(mergeSort(new int[]{3, 6, 1, 4, 0, 11, 24, -2, 77})));
+        System.out.println("Fibonacc | " + fibonacci(10));
 
     }
 
@@ -17,6 +18,10 @@ public class Main {
 
     public static int findMinimum(int[] ints){
         return (ints.length < 2) ? (ints[0]) : (Math.min(ints[ints.length-1], findMinimum(Arrays.copyOf(ints, ints.length-1))));
+    }
+
+    public static int fibonacci(int i){
+        return (i <= 1) ? i : fibonacci(i - 1) + fibonacci(i - 2);
     }
 
     public static int[] mergeSort(int[] ints){
